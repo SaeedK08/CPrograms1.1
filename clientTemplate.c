@@ -34,8 +34,8 @@ int main(int argc, char **argv)
    
    struct sockaddr_in addr = {0};
     addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = inet_addr("130.229.175.91");            // Host IP-adress
-    addr.sin_port = htons(8080);                                    // Host port number
+    addr.sin_addr.s_addr = inet_addr(ROW2);            // Host IP-adress
+    addr.sin_port = htons(8080);                       // Host port number
 	if (connect(sock, (const struct sockaddr *)&addr, sizeof(addr)) == -1) {
         return 2;
     }
